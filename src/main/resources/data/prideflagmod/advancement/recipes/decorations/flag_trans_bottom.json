@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pattern_trans": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:pattern_trans"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "prideflagmod:flag_trans_bottom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pattern_trans"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "prideflagmod:flag_trans_bottom"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:pink_dye",
+    "minecraft:white_dye",
+    "minecraft:blue_dye",
+    "minecraft:light_blue_dye",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "id": "prideflagmod:pattern_transmen"
+  }
+}

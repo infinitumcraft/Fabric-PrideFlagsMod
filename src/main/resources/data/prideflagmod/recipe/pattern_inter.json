@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:yellow_dye",
+    "minecraft:purple_dye"
+  ],
+  "result": {
+    "id": "prideflagmod:pattern_inter"
+  }
+}

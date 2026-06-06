@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:yellow_dye",
+    "minecraft:cyan_dye",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "prideflagmod:pattern_pansexual"
+  }
+}

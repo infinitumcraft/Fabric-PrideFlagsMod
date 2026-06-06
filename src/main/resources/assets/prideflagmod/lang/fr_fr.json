@@ -12,6 +12,10 @@
   "item.prideflagmod.pattern_asexual": "Motif Ace",
   "item.prideflagmod.pattern_aromantic": "Motif Aromantique",
   "item.prideflagmod.pattern_genderfluid": "Motif Genderfluide",
+  "item.prideflagmod.pattern_demigirl": "Motif Demifille",
+  "item.prideflagmod.pattern_demiboy": "Motif Demihomme",
+  "item.prideflagmod.pattern_transfem": "Motif Transfeminine",
+  "item.prideflagmod.pattern_transmen": "Motif Transmasculin",
 
   "item.prideflagmod.shield_trans": "Bouclier Trans",
 
@@ -28,10 +32,15 @@
   "block.prideflagmod.flag_asexual": "Drapeau Ace",
   "block.prideflagmod.flag_aromantic": "Drapeau Aromantique",
   "block.prideflagmod.flag_genderfluid": "Drapeau Genderfluide",
+  "block.prideflagmod.flag_demigirl": "Drapeau Demifille",
+  "block.prideflagmod.flag_demiboy": "Drapeau Demihomme",
+  "block.prideflagmod.flag_transfem": "Drapeau Transfeminine",
+  "block.prideflagmod.flag_transmen": "Drapeau Transmasculin",
 
   "advancement.prideflagmod.got_pattern.title": "Mon premier motif !",
   "advancement.prideflagmod.got_pattern.description": "Amateur de coloriage",
   "advancement.prideflagmod.got_flag.title": "Mon premier drapeau !",
   "advancement.prideflagmod.got_flag.description": "Brandis tes drapeaux !",
   "mod.prideflagmod.description": "Ajoute une palette d’objets thématiques à la communauté LGBTI+"
+
 }

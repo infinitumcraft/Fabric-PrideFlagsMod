@@ -1,21 +1,21 @@
 package com.hyrul.prideflagmod.datagen;
 
 import com.hyrul.prideflagmod.block.ModBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
-import net.minecraft.registry.RegistryWrapper;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModLootTableProvider extends FabricBlockLootTableProvider {
-    public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class ModLootTableProvider extends FabricBlockLootSubProvider {
+
+    public ModLootTableProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
-
         Block[] prideFlags = {
                 ModBlocks.FLAG_BI,
                 ModBlocks.FLAG_GAY,
@@ -29,11 +29,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 ModBlocks.FLAG_NONBINARY,
                 ModBlocks.FLAG_ASEXUAL,
                 ModBlocks.FLAG_AROMANTIC,
-                ModBlocks.FLAG_GENDERFLUID
+                ModBlocks.FLAG_GENDERFLUID,
+                ModBlocks.FLAG_DEMIGIRL,
+                ModBlocks.FLAG_DEMIBOY,
+                ModBlocks.FLAG_TRANSFEM,
+                ModBlocks.FLAG_TRANSMEN
         };
-
         for (Block flag : prideFlags) {
-            addDrop(flag);
+            this.dropSelf(flag);
         }
     }
 }

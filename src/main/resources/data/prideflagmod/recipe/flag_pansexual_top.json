@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "minecraft:iron_nugget",
+    "P": "prideflagmod:pattern_pansexual",
+    "W": "minecraft:white_wool"
+  },
+  "pattern": [
+    "N N",
+    "WPW",
+    "   "
+  ],
+  "result": {
+    "id": "prideflagmod:flag_pansexual"
+  }
+}

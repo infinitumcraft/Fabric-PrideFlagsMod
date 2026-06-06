@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pattern_progress": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:pattern_progress"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "prideflagmod:flag_progress_top"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pattern_progress"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "prideflagmod:flag_progress_top"
+    ]
+  }
+}

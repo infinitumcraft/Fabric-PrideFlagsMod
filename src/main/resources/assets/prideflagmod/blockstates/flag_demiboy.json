@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "prideflagmod:block/flag_demiboy",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "prideflagmod:block/flag_demiboy"
+    },
+    "facing=south": {
+      "model": "prideflagmod:block/flag_demiboy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prideflagmod:block/flag_demiboy",
+      "y": 270
+    }
+  }
+}

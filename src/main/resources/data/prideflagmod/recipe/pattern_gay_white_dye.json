@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:white_dye",
+    "minecraft:green_dye",
+    "minecraft:lime_dye",
+    "minecraft:blue_dye",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "id": "prideflagmod:pattern_gay"
+  }
+}

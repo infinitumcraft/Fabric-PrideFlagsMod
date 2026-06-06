@@ -12,6 +12,10 @@
   "item.prideflagmod.pattern_asexual": "Asexual Pattern",
   "item.prideflagmod.pattern_aromantic": "Aromantic Pattern",
   "item.prideflagmod.pattern_genderfluid": "Genderfluid Pattern",
+  "item.prideflagmod.pattern_demigirl": "Demigirl Pattern",
+  "item.prideflagmod.pattern_demiboy": "Demiboy Pattern",
+  "item.prideflagmod.pattern_transfem": "Transfem Pattern",
+  "item.prideflagmod.pattern_transmen": "Transmen Pattern",
 
   "item.prideflagmod.shield_trans": "Trans Shield",
 
@@ -28,6 +32,10 @@
   "block.prideflagmod.flag_asexual": "Asexual Flag",
   "block.prideflagmod.flag_aromantic": "Aromantic Flag",
   "block.prideflagmod.flag_genderfluid": "Genderfluid Flag",
+  "block.prideflagmod.flag_demigirl": "Demigirl Flag",
+  "block.prideflagmod.flag_demiboy": "Demiboy Flag",
+  "block.prideflagmod.flag_transfem": "Transfem Flag",
+  "block.prideflagmod.flag_transmen": "Transmen Flag",
 
   "advancement.prideflagmod.got_pattern.title": "My first pattern!",
   "advancement.prideflagmod.got_pattern.description": "Coloring enthusiast",

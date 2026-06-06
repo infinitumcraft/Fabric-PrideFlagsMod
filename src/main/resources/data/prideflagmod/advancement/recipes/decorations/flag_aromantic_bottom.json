@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pattern_aromantic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:pattern_aromantic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "prideflagmod:flag_aromantic_bottom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pattern_aromantic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "prideflagmod:flag_aromantic_bottom"
+    ]
+  }
+}

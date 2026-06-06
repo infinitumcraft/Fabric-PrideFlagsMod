@@ -1,0 +1,209 @@
+{
+  "parent": "prideflagmod:got_pattern",
+  "criteria": {
+    "has_aromantic_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_aromantic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_asexual_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_asexual"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bi_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_bi"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_demiboy_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_demiboy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_demigirl_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_demigirl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gay_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_gay"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_genderfluid_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_genderfluid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_inter_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_inter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lesb_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_lesb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nonbinary_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_nonbinary"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pansexual_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_pansexual"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_polyamory_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_polyamory"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pride_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_pride"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_progress_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_progress"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_trans_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_trans"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_transfem_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_transfem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_transmen_flag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:flag_transmen"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.prideflagmod.got_flag.description"
+    },
+    "icon": {
+      "id": "prideflagmod:flag_progress"
+    },
+    "title": {
+      "translate": "advancement.prideflagmod.got_flag.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_pride_flag",
+      "has_trans_flag",
+      "has_gay_flag",
+      "has_bi_flag",
+      "has_lesb_flag",
+      "has_progress_flag",
+      "has_inter_flag",
+      "has_polyamory_flag",
+      "has_pansexual_flag",
+      "has_nonbinary_flag",
+      "has_asexual_flag",
+      "has_aromantic_flag",
+      "has_genderfluid_flag",
+      "has_demigirl_flag",
+      "has_demiboy_flag",
+      "has_transfem_flag",
+      "has_transmen_flag"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

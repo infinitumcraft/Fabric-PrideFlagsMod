@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:bone_meal",
+    "minecraft:cyan_dye",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "prideflagmod:pattern_trans"
+  }
+}

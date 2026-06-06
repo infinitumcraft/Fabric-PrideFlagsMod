@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pattern_pansexual": {
+      "conditions": {
+        "items": [
+          {
+            "items": "prideflagmod:pattern_pansexual"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "prideflagmod:flag_pansexual_bottom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pattern_pansexual"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "prideflagmod:flag_pansexual_bottom"
+    ]
+  }
+}

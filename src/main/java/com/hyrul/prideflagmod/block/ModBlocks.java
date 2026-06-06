@@ -1,18 +1,18 @@
 package com.hyrul.prideflagmod.block;
 
 import com.hyrul.prideflagmod.PrideFlags;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.resources.Identifier;
 
 public class ModBlocks {
 
@@ -29,50 +29,62 @@ public class ModBlocks {
     public static final Block FLAG_ASEXUAL = registerBlock("flag_asexual", WallFlagBlock::new);
     public static final Block FLAG_AROMANTIC = registerBlock("flag_aromantic", WallFlagBlock::new);
     public static final Block FLAG_GENDERFLUID = registerBlock("flag_genderfluid", WallFlagBlock::new);
+    public static final Block FLAG_DEMIGIRL = registerBlock("flag_demigirl", WallFlagBlock::new);
+    public static final Block FLAG_DEMIBOY = registerBlock("flag_demiboy", WallFlagBlock::new);
+    public static final Block FLAG_TRANSFEM = registerBlock("flag_transfem", WallFlagBlock::new);
+    public static final Block FLAG_TRANSMEN = registerBlock("flag_transmen", WallFlagBlock::new);
 
-    private static AbstractBlock.Settings createWallFlagSettings() {
-        return AbstractBlock.Settings.create()
+    private static BlockBehaviour.Properties createWallFlagSettings(ResourceKey<Block> blockKey) {
+        return BlockBehaviour.Properties.of()
+                .setId(blockKey)
                 .strength(0.5f, 0.8f)
-                .nonOpaque()
-                .sounds(BlockSoundGroup.WOOL);
+                .noOcclusion()
+                .sound(SoundType.WOOL);
     }
 
-    private static Block registerBlock(String name, java.util.function.Function<AbstractBlock.Settings, Block> factory) {
-        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(PrideFlags.MOD_ID, name));
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .registryKey(blockKey)
-                .strength(0.5f, 0.8f)
-                .nonOpaque()
-                .sounds(BlockSoundGroup.WOOL);
+    private static Block registerBlock(String name, java.util.function.Function<BlockBehaviour.Properties, Block> factory) {
+        Identifier id = Identifier.fromNamespaceAndPath(PrideFlags.MOD_ID, name);
+        ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
+
+        BlockBehaviour.Properties settings = createWallFlagSettings(blockKey);
 
         Block block = factory.apply(settings);
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(PrideFlags.MOD_ID, name), block);
+        return Registry.register(BuiltInRegistries.BLOCK, id, block);
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(PrideFlags.MOD_ID, name),
-                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(PrideFlags.MOD_ID, name)))));
+        Identifier id = Identifier.fromNamespaceAndPath(PrideFlags.MOD_ID, name);
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
+
+        Registry.register(BuiltInRegistries.ITEM, id,
+                new BlockItem(block, new Item.Properties()
+                        .useBlockDescriptionPrefix()
+                        .setId(itemKey)));
     }
 
     public static void registerModBlocks() {
         PrideFlags.LOGGER.info("Registering blocks for " + PrideFlags.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.FLAG_BI);
-            entries.add(ModBlocks.FLAG_TRANS);
-            entries.add(ModBlocks.FLAG_GAY);
-            entries.add(ModBlocks.FLAG_LESB);
-            entries.add(ModBlocks.FLAG_INTER);
-            entries.add(ModBlocks.FLAG_PRIDE);
-            entries.add(ModBlocks.FLAG_PROGRESS);
-            entries.add(ModBlocks.FLAG_POLYAMORY);
-            entries.add(ModBlocks.FLAG_PANSEXUAL);
-            entries.add(ModBlocks.FLAG_NONBINARY);
-            entries.add(ModBlocks.FLAG_ASEXUAL);
-            entries.add(ModBlocks.FLAG_AROMANTIC);
-            entries.add(ModBlocks.FLAG_GENDERFLUID);
-        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(ModBlocks.FLAG_BI);
+            creativeTab.accept(ModBlocks.FLAG_TRANS);
+            creativeTab.accept(ModBlocks.FLAG_GAY);
+            creativeTab.accept(ModBlocks.FLAG_LESB);
+            creativeTab.accept(ModBlocks.FLAG_INTER);
+            creativeTab.accept(ModBlocks.FLAG_PRIDE);
+            creativeTab.accept(ModBlocks.FLAG_PROGRESS);
+            creativeTab.accept(ModBlocks.FLAG_POLYAMORY);
+            creativeTab.accept(ModBlocks.FLAG_PANSEXUAL);
+            creativeTab.accept(ModBlocks.FLAG_NONBINARY);
+            creativeTab.accept(ModBlocks.FLAG_ASEXUAL);
+            creativeTab.accept(ModBlocks.FLAG_AROMANTIC);
+            creativeTab.accept(ModBlocks.FLAG_GENDERFLUID);
+            creativeTab.accept(ModBlocks.FLAG_DEMIGIRL);
+            creativeTab.accept(ModBlocks.FLAG_DEMIBOY);
+            creativeTab.accept(ModBlocks.FLAG_TRANSFEM);
+            creativeTab.accept(ModBlocks.FLAG_TRANSMEN);
+        }
+        );
     }
 }
